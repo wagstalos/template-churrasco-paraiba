@@ -1,0 +1,255 @@
+.s-service {
+    padding: 90px 0;
+    background-color: #000000;
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1)),
+        /* Gradiente escuro */ url("../img/50.jpg") no-repeat center center;
+    background-size: cover;
+
+    .js-desconto {
+        font-size: 1.2rem;
+        background-color: red;
+        color: $white;
+        display: inline-flex;
+        padding: 0 1rem;
+        border-radius: 10px;
+    }
+
+    .js-price-old {
+        font-size: 1.2rem;
+        text-decoration: line-through;
+        font-weight: 700;
+    }
+
+    .destaque {
+        font-weight: 700;
+        font-size: 3rem;
+        margin-top: $gutter * 2;
+    }
+
+    &-title {
+        font-size: 3rem;
+        margin-bottom: 40px;
+        span {
+            font-size: 7rem;
+            color: $brand-main;
+        }
+    }
+
+    .orcamento {
+        width: 100%;
+        padding: 24px;
+        margin-top: 70px;
+        position: relative;
+        background-color: $brand-main-light;
+        color: $black;
+        padding-left: 50px;
+        background-image: url("../img/halteres.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 402px -150px;
+        border-radius: 20px;
+
+        .btn-primary {
+            background-color: $white;
+            color: $black;
+            max-width: 275px;
+
+            font-weight: 500;
+            margin-top: 25px;
+
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+
+            svg {
+                transition: transform 0.3s ease;
+            }
+
+            &:hover {
+                svg {
+                    transform: translateX(8px);
+                }
+            }
+        }
+
+        h2,
+        p {
+            text-align: left;
+        }
+
+        p {
+            max-width: 50%;
+            margin-top: 30px;
+            color: #393939;
+        }
+    }
+
+    .box-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+        margin-top: 80px;
+    }
+
+    .box {
+        width: 50%;
+        border: 1px solid #3d3d3d;
+
+        border-radius: 10px;
+        padding: $gutter * 2;
+        position: relative;
+        background-color: rgb(0 0 0 / 50%);
+        backdrop-filter: blur(4px);
+
+        &:nth-child(2) {
+            width: 25%;
+            background-image: url("../img/churras.png");
+            // background-size: cover;
+            background-repeat: no-repeat;
+            background-position: 200px 50px;
+        }
+        &:nth-child(3) {
+            width: 25%;
+            background-image: url("../img/anilhas.webp");
+            // background-size: cover;
+            background-repeat: no-repeat;
+            background-position: 125px 215px;
+        }
+
+        .badge {
+            // background-color: $brand-main;
+            border: 1px solid $brand-main;
+            padding: 4px 8px;
+            color: $white;
+            border-radius: 8px;
+            font-weight: 500;
+            font-size: 1.2rem;
+
+            display: table;
+            margin: 0 auto;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .d-flex-price {
+            display: flex;
+            margin-top: $gutter;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .price {
+            color: $brand-main;
+            font-weight: 600;
+        }
+
+        ul {
+            margin-top: 5rem;
+            li {
+                display: flex;
+                font-size: 1.6rem;
+                color: $gray-100;
+
+                margin-bottom: 2rem;
+                img {
+                    margin-right: $gutter * 2;
+                }
+            }
+        }
+
+        .btn-price {
+            background-color: $brand-main-light;
+            color: $black;
+            font-weight: 600;
+            padding: 16px;
+            border-radius: 40px;
+            font-size: 1.6rem;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            width: 80%;
+            margin: 0 auto;
+            margin-top: 60px;
+
+            transition: all 0.3s ease;
+            margin-bottom: $gutter * 3;
+
+            &:hover {
+                background-color: $white;
+                color: $black;
+            }
+        }
+
+        &:hover {
+            border: 1px solid $brand-main;
+        }
+    }
+
+    // responsive
+    @include responsive(1200px) {
+        &-title {
+            span {
+                font-size: 6rem;
+            }
+        }
+
+        .destaque {
+            font-weight: 700;
+            font-size: 3.5rem;
+            line-height: 100%;
+            margin-top: $gutter * 3;
+        }
+
+        .orcamento {
+            background-position: 220px 98px;
+            p {
+                max-width: 80%;
+            }
+        }
+        .d-flex {
+            flex-direction: column;
+            margin-top: 2.5rem;
+        }
+
+        .box {
+            width: 90%;
+            &:nth-child(2) {
+                width: 90%;
+            }
+            &:nth-child(3) {
+                width: 90%;
+            }
+        }
+    }
+
+    @include responsive($mobile) {
+        .orcamento {
+            background-position: 6px 182px;
+            padding-left: $gutter * 3;
+            h2 {
+                text-align: center;
+            }
+            p {
+                max-width: 100%;
+                margin-top: 30px;
+                color: #6d6d6d;
+            }
+
+            .btn-primary {
+                max-width: 100%;
+            }
+        }
+
+        .box {
+            .btn-price {
+                width: 100%;
+            }
+        }
+    }
+}
