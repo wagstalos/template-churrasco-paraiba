@@ -68,17 +68,16 @@ header {
     }
 
     @include responsive(840px) {
+        height: 6rem;
+        display: flex;
+        align-items: center;
+        width: 90%;
+        left: 5%;
         #logo {
             h3 {
                 font-size: 1.8rem;
             }
         }
-
-        border: 1px solid rgba(255, 255, 255, 0.168627451);
-        background-color: rgba(0, 0, 0, 0.733);
-        height: 6rem;
-        display: flex;
-        align-items: center;
         nav {
             ul {
                 display: none;
