@@ -1,13 +1,10 @@
 .s-about {
     @include paddingSection(90px);
-    // background-color: #111214;
-    background-image: url("../img/churrasqueira.png");
-    // background-size: cover;
     background-repeat: no-repeat;
     background-position: 1500px 524px;
 
     .d-flex {
-        margin-top: 80px;
+        margin-top: 50px;
         justify-content: space-between;
         align-items: center;
     }
