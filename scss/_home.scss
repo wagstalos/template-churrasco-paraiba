@@ -74,20 +74,11 @@
         width: 55%;
         position: relative;
 
-        // .mini-churras {
-        //     position: absolute;
-        //     bottom: 0;
-        //     left: 0;
-        //     animation: subirDescer 5s ease-in-out infinite;
-        //     width: 140px; /* Ajuste o tamanho conforme necessário */
-        //     height: auto;
-        // }
-
         .mini-churras-container {
             position: absolute; /* Define o container como referência para o pseudo-elemento */
             width: 140px; /* Ajuste o tamanho conforme necessário */
             height: auto;
-            bottom: 0;
+            bottom: -55px;
             animation: subirDescer 5s ease-in-out infinite;
         }
 
@@ -97,19 +88,19 @@
             top: 0;
             left: 50%;
             transform: translateX(-50%);
-            width: 100%; /* Para ampliar o efeito além da imagem */
+            width: 100%;
             height: 100%;
             background: radial-gradient(circle, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 80%);
             opacity: 0.6;
             animation: smoke 4s infinite ease-in-out;
             pointer-events: none;
             filter: blur(8px);
-            z-index: 10; /* Certifique-se de que o efeito fique acima da imagem */
+            z-index: 10;
         }
 
         .mini-churras {
-            position: relative; /* Garante que a imagem esteja no mesmo contexto do container */
-            z-index: 2; /* Mantém a imagem acima do pseudo-elemento */
+            position: relative;
+            z-index: 2;
             width: 100%;
             height: auto;
         }
@@ -265,9 +256,13 @@
             }
         }
         &__image {
+            .mini-churras-container {
+                width: 120px;
+                bottom: -65px;
+            }
             .selo {
                 top: 0;
-                right: 8%;
+                right: 0;
             }
         }
     }
