@@ -74,10 +74,66 @@
         width: 55%;
         position: relative;
 
+        // .mini-churras {
+        //     position: absolute;
+        //     bottom: 0;
+        //     left: 0;
+        //     animation: subirDescer 5s ease-in-out infinite;
+        //     width: 140px; /* Ajuste o tamanho conforme necessário */
+        //     height: auto;
+        // }
+
+        .mini-churras-container {
+            position: absolute; /* Define o container como referência para o pseudo-elemento */
+            width: 140px; /* Ajuste o tamanho conforme necessário */
+            height: auto;
+            bottom: 0;
+            animation: subirDescer 5s ease-in-out infinite;
+        }
+
+        .mini-churras-container::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%; /* Para ampliar o efeito além da imagem */
+            height: 100%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 80%);
+            opacity: 0.6;
+            animation: smoke 4s infinite ease-in-out;
+            pointer-events: none;
+            filter: blur(8px);
+            z-index: 10; /* Certifique-se de que o efeito fique acima da imagem */
+        }
+
+        .mini-churras {
+            position: relative; /* Garante que a imagem esteja no mesmo contexto do container */
+            z-index: 2; /* Mantém a imagem acima do pseudo-elemento */
+            width: 100%;
+            height: auto;
+        }
+
+        /* Animação de fumaça */
+        @keyframes smoke {
+            0% {
+                transform: translate(-50%, 0) scale(1);
+                opacity: 0.6;
+            }
+            50% {
+                transform: translate(-50%, -30%) scale(1.2);
+                opacity: 0.3;
+            }
+            100% {
+                transform: translate(-50%, -60%) scale(1.5);
+                opacity: 0;
+            }
+        }
+
         .selo {
             position: absolute;
-            top: -10px;
-            right: 12%;
+            top: 25px;
+            right: 8%;
             background-color: rgba(0, 0, 0, 0.55);
             border: 1px solid rgba(196, 196, 196, 0.2784313725);
             backdrop-filter: blur(4px);

@@ -92,17 +92,10 @@
 
         &:nth-child(2) {
             width: 25%;
-            background-image: url("../img/churras.png");
+            background-image: url("../img/churras.webp");
             // background-size: cover;
             background-repeat: no-repeat;
             background-position: 200px 50px;
-        }
-        &:nth-child(3) {
-            width: 25%;
-            background-image: url("../img/anilhas.webp");
-            // background-size: cover;
-            background-repeat: no-repeat;
-            background-position: 125px 215px;
         }
 
         .badge {
@@ -187,7 +180,7 @@
 
         .destaque {
             font-weight: 700;
-            font-size: 3.5rem;
+            font-size: 2.5rem;
             line-height: 100%;
             margin-top: $gutter * 3;
         }
@@ -204,7 +197,7 @@
         }
 
         .box {
-            width: 90%;
+            width: 100%;
             &:nth-child(2) {
                 width: 90%;
             }
@@ -215,6 +208,9 @@
     }
 
     @include responsive($mobile) {
+        &-title {
+            text-align: center;
+        }
         .orcamento {
             background-position: 6px 182px;
             padding-left: $gutter * 3;
