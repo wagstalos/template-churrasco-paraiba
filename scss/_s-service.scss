@@ -93,13 +93,11 @@
         &:nth-child(2) {
             width: 25%;
             background-image: url("../img/churras.webp");
-            // background-size: cover;
             background-repeat: no-repeat;
-            background-position: 200px 50px;
+            background-position: 187px 155px;
         }
 
         .badge {
-            // background-color: $brand-main;
             border: 1px solid $brand-main;
             padding: 4px 8px;
             color: $white;
@@ -200,6 +198,7 @@
             width: 100%;
             &:nth-child(2) {
                 width: 90%;
+                background-position: 102px 223px;
             }
             &:nth-child(3) {
                 width: 90%;
